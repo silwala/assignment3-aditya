@@ -1,3 +1,8 @@
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,20 +25,18 @@ header{
   transform-origin: top;
   backdrop-filter: blur(5px);
   border-radius: 15px;
+
 }
 
 footer{
+  width: 98vw;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 2rem;
   font-weight: bold;
   background-color: rgba(28, 28, 28, 0);
   backdrop-filter: blur(5px);
   position: fixed;
   bottom: 0;
-  width: 100%;
 }
 
 
