@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: sans-serif;
+  background-image: url("assets/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+header{
+  margin: auto;
+  margin-top: 1vh;
+  height: fit-content;
+  width: 98vw;
+  background-color: rgba(28, 28, 28, 0.32);
+  text-align: center;
+  padding: 5px;
+  transform-origin: top;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+footer{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  font-weight: bold;
+  background-color: rgba(28, 28, 28, 0);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
