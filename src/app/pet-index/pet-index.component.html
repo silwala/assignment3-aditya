@@ -1,6 +1,6 @@
 <h2>Pet Catalog</h2>
 <table>
-  <tr *ngFor="let p of pets">
+  <tr *ngFor="let p of (pets | async)">
     <td>
       <a [routerLink]="['pet',p.id]">
         <img [src]="p.imgSrc" [alt]="'image of ' + p.name ">

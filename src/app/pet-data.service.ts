@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {PetJson} from "./json-structure";
+import {PetDataJson, PetJson} from "./json-structure";
 import {Pet} from "./pet";
-import {petsCatalog} from "./pet-data";
+import {HttpClient} from "@angular/common/http";
+import {map, Observable, of, switchMap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +11,11 @@ export class PetDataService {
 
   private pets: Pet[] = [];
 
-  constructor() {
-
-    petsCatalog.pets.forEach(
-      (petJson : PetJson) => this.pets.push(PetDataService.json2Pet((petJson)))
-    );
-
+  constructor(private http: HttpClient) {
   }
 
   private static imageFolder = 'assets/img/pets/';
+  private static dataUri: string = 'assets/data/pet-data.json'
 
   private static json2Pet(petJson: PetJson): Pet{
     const pet: Pet = new Pet();
@@ -30,11 +27,17 @@ export class PetDataService {
     return pet;
   }
 
-  public getPetList(): Pet[]{
-    return this.pets;
+  public getAllPets(): Observable<Pet[]>{
+    return this.http.get<PetDataJson>(PetDataService.dataUri)
+      .pipe(
+        map(petCatalog => petCatalog.pets
+          .map(pet => PetDataService.json2Pet(pet)))
+      );
   }
 
-  public getPetById(id: number): Pet | undefined {
-    return this.pets.find(pet => pet.id === id);
+  public getPetById(id: number): Observable<Pet | undefined> {
+    return this.getAllPets().pipe(
+      switchMap(pets => of(pets.find(pet => pet.id === id)))
+    );
   }
 }
