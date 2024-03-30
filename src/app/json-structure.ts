@@ -9,3 +9,7 @@ export interface PetJson {
 export interface PetDataJson{
   pets: PetJson[];
 }
+
+export interface DataJson{
+  _embedded: PetDataJson;
+}
