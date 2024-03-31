@@ -11,6 +11,4 @@ export class PetCardsComponent {
   @Input() imgSrc = '';
   @Input() name = '';
   @Input() petType = '';
-  @Input() age = 0;
-
 }

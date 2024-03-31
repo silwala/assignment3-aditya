@@ -9,6 +9,7 @@ import { PetIndexComponent } from './pet-index/pet-index.component';
 import { PetDetailsComponent } from './pet-details/pet-details.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PetCardsComponent } from './pet-cards/pet-cards.component';
+import { PetDetailCardComponent } from './pet-detail-card/pet-detail-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PetCardsComponent } from './pet-cards/pet-cards.component';
     FooterComponent,
     PetIndexComponent,
     PetDetailsComponent,
-    PetCardsComponent
+    PetCardsComponent,
+    PetDetailCardComponent
   ],
   imports: [
     BrowserModule,

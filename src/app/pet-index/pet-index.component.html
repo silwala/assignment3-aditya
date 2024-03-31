@@ -1,5 +1,5 @@
 <div class="mainContainer">
   <div class="cardsContainer">
-    <app-pet-cards *ngFor="let p of (pets | async)" [imgSrc]="p.imgSrc" [name]="p.name" [petType]="p.petKind" [age]="p.age" [routePet]="['/pet', p.id]"></app-pet-cards>
+    <app-pet-cards *ngFor="let p of (pets | async)" [imgSrc]="p.imgSrc" [name]="p.name" [petType]="p.petKind"  [routePet]="['/pet', p.id]"></app-pet-cards>
   </div>
 </div>

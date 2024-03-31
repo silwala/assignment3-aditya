@@ -1,19 +1,15 @@
 <ng-container *ngIf="pet != undefined; else not_found">
-  <p>
-    <span class="pet_name">Pet name: {{ pet.name }}</span>
-  </p>
-  <p>
-    <img [src]="pet.imgSrc" alt="image of {{ pet.petKind }} named {{ pet.name }}">
-  </p>
-  <p>
-    <span>age: {{ pet.age }}</span>
-  </p>
-  <p>
-    <span>pet kind: {{ pet.petKind }}</span>
-  </p>
+  <div class="cardContainer">
+    <app-pet-detail-card [imgSrc]="pet.imgSrc" [name]="pet.name" [petType]="pet.petKind" [age]="pet.age"></app-pet-detail-card>
+    <button routerLink="/">Pet catalog</button>
+  </div>
 </ng-container>
 <ng-template #not_found>
-  <p>
-    <a routerLink="/">Pet Catalog</a>
-  </p>
+  <div class="notFoundContainer">
+    <img src="assets/img/petNotFound.webp" width="450px" height="450px">
+    <h1>Pet not found</h1>
+    <button routerLink="/">Pet catalog</button>
+  </div>
 </ng-template>
+
+

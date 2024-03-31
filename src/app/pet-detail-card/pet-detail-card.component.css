@@ -1,0 +1,28 @@
+.container{
+  width: 400px;
+  height: fit-content;
+  background: rgba(135, 0, 224, 0.46);
+  background: linear-gradient(142deg, rgba(135, 0, 224, 0.27) 17%, rgba(255, 0, 213, 0.27) 100%);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 5px solid purple;
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  transition: .5s;
+  user-select: none;
+}
+
+.image img{
+  border-radius: 10px 10px 0 0;
+}
+
+.petInfo{
+  background-color: rgba(178, 156, 196, 0.4);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 1px 1px 5px inset gray,
+  -1px -1px 5px inset rgb(220, 220, 220);
+}
