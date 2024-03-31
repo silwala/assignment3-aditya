@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PetIndexComponent } from './pet-index/pet-index.component';
 import { PetDetailsComponent } from './pet-details/pet-details.component';
 import {HttpClientModule} from "@angular/common/http";
+import { PetCardsComponent } from './pet-cards/pet-cards.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
     HeaderComponent,
     FooterComponent,
     PetIndexComponent,
-    PetDetailsComponent
+    PetDetailsComponent,
+    PetCardsComponent
   ],
   imports: [
     BrowserModule,

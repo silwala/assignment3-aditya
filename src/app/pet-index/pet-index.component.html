@@ -1,15 +1,5 @@
-<h2>Pet Catalog</h2>
-<table>
-  <tr *ngFor="let p of (pets | async)">
-    <td>
-      <a [routerLink]="['pet',p.id]">
-        <img [src]="p.imgSrc" [alt]="'image of ' + p.name ">
-      </a>
-    </td>
-    <td>
-      <span class="pet_name">{{p.name}}</span>
-      <span class="pet_king">{{p.petKind}}</span>
-      <span class="pet_age">{{p.age}}</span>
-    </td>
-  </tr>
-</table>
+<div class="mainContainer">
+  <div class="cardsContainer">
+    <app-pet-cards *ngFor="let p of (pets | async)" [imgSrc]="p.imgSrc" [name]="p.name" [petType]="p.petKind" [age]="p.age" [routePet]="['/pet', p.id]"></app-pet-cards>
+  </div>
+</div>
